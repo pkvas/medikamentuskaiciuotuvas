@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="no-js" lang='en'>
+
+<head>
+    <title>Medikamentu skaičiuotuvas</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 2em;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <form role="form" id="price" name="price">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="control-label">Antibiotikai</label>
+                            <input name="colorful" id="qty_antibiotikai" class="form-control" type="number" value="0" min="0" max="5" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Bintai</label>
+                            <input name="colorful" id="qty_bintai" class="form-control" type="number" value="0" min="0" max="20" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Vaistinėlės</label>
+                            <input name="colorful" id="qty_vaistineles" class="form-control" type="number" value="0" min="0" max="5" />
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label class="control-label">Kūno bintas</label>
+                            <input name="colorful" id="qty_kunobintas" class="form-control" type="number" value="0" min="0" max="5" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Kojos įtvaras</label>
+                            <input name="colorful" id="qty_kojositvaras" class="form-control" type="number" value="0" min="0" max="5" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Rankos įtvaras</label>
+                            <input name="colorful" id="qty_rankositvaras" class="form-control" type="number" value="0" min="0" max="5" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Kaklo įtvaras</label>
+                            <input name="colorful" id="qty_kakloitvaras" class="form-control" type="number" value="0" min="0" max="5" />
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="col-9 text-center total">
+                    <b>Suma:</b>
+                    <span id="total_value">0</span>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="bootstrap-number-input.js"></script>
+    <script>
+        // Remember set you events before call bootstrapSwitch or they will fire after bootstrapSwitch's events
+        $("[name='checkbox2']").change(function() {
+            if (!confirm('Do you wanna cancel me!')) {
+                this.checked = true;
+            }
+        });
+
+        $('#after').bootstrapNumber();
+        $('#qty_antibiotikai').bootstrapNumber({
+            upClass: 'success',
+            downClass: 'danger'
+        });
+        $('#qty_bintai').bootstrapNumber({
+            upClass: 'success',
+            downClass: 'danger'
+        });
+        $('#qty_vaistineles').bootstrapNumber({
+            upClass: 'success',
+            downClass: 'danger'
+        });
+        $('#qty_kunobintas').bootstrapNumber({
+            upClass: 'success',
+            downClass: 'danger'
+        });
+        $('#qty_kojositvaras').bootstrapNumber({
+            upClass: 'success',
+            downClass: 'danger'
+        });
+        $('#qty_rankositvaras').bootstrapNumber({
+            upClass: 'success',
+            downClass: 'danger'
+        });
+        $('#qty_kakloitvaras').bootstrapNumber({
+            upClass: 'success',
+            downClass: 'danger'
+        });
+
+    </script>
+
+
+    <script>
+        function calculateTotal() {
+            let unit_price = {
+                antibiotikai: 200,
+                bintai: 100,
+                vaistineles: 300,
+                kunobintas: 400,
+                kojositvaras: 400,
+                rankositvaras: 400,
+                kakloitvaras: 400
+            };
+            let item_price = {}
+
+            item_price.antibiotikai = ($("#qty_antibiotikai").val() * unit_price.antibiotikai)
+            $("#price_antibiotikai").val(item_price.antibiotikai);
+
+            item_price.bintai = ($("#qty_bintai").val() * unit_price.bintai)
+            $("#price_bintai").val(item_price.bintai);
+
+            item_price.vaistineles = ($("#qty_vaistineles").val() * unit_price.vaistineles)
+            $("#price_vaistineles").val(item_price.vaistineles);
+
+
+
+            item_price.kunobintas = ($("#qty_kunobintas").val() * unit_price.kunobintas)
+            $("#price_kunobintas").val(item_price.kunobintas);
+
+            item_price.kojositvaras = ($("#qty_kojositvaras").val() * unit_price.kojositvaras)
+            $("#price_kojositvaras").val(item_price.kojositvaras);
+
+            item_price.rankositvaras = ($("#qty_rankositvaras").val() * unit_price.rankositvaras)
+            $("#price_rankositvaras").val(item_price.rankositvaras);
+
+            item_price.kakloitvaras = ($("#qty_kakloitvaras").val() * unit_price.kakloitvaras)
+            $("#price_kakloitvaras").val(item_price.kakloitvaras);
+
+
+            let total = item_price.antibiotikai + item_price.bintai + item_price.vaistineles + item_price.kunobintas + item_price.kojositvaras + item_price.rankositvaras + item_price.kakloitvaras;
+
+
+            $("#total_value").text(total);
+
+        }
+
+        $(function() {
+            $(".form-control").on("change keyup", calculateTotal)
+        })
+
+    </script>
+
+
+</body>
+
+</html>
