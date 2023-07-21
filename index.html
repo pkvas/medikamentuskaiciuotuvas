@@ -1,258 +1,297 @@
 <!DOCTYPE html>
-<html class="no-js" lang='en'>
-
+<html class="dark-layout" lang="en" data-layout="dark-layout" data-textdirection="ltr">
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="logo.png" />
-    <title>Medikamentu skaičiuotuvas</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="Distinctive.lt GMP Sistema">
+    <title>Distinctive RP GMP</title>
+    <link rel="shortcut icon" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Roboto', Arial;
-            padding-top: 2em;
-            background-color: #283046;
-        }
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/vendors.min.css">
 
-        /*#7367f0*/
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/components.css?ver=2">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/themes/semi-dark-layout.css">
 
-        .alert {
-            width: 100%;
-            padding: 12px 16px;
-            border-radius: 4px;
-            border-style: solid;
-            border-width: 1px;
-            margin-bottom: 12px;
-            font-size: 16px;
-        }
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/style.css">
 
-        .alert.alert-success {
-            background-color: rgba(217, 237, 247, 1);
-            color: rgba(49, 112, 143, 1);
-            border-color: rgba(126, 182, 193, 1);
-        }
-
-        .alert.alert-info {
-            background-color: rgba(217, 237, 247, 1);
-            color: rgba(49, 112, 143, 1);
-            border-color: rgba(126, 182, 193, 1);
-        }
-
-
-        .alert.alert-warning {
-            background-color: rgba(252, 248, 227, 1);
-            border-color: rgba(177, 161, 129, 1);
-            color: rgba(138, 109, 59, 1);
-        }
-
-        .alert.alert-danger {
-            background-color: rgba(248, 215, 218, 1);
-            border-color: rgba(220, 53, 69, 1);
-            color: rgba(114, 28, 36, 1);
-        }
-
-        nowrap {
-            white-space: nowrap;
-        }
-
-        .control-label {
-            color: white;
-        }
-
-    </style>
 </head>
 
-<body>
-        <div class="row">
-        <div class="col-md-6">
-        </div>
+<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static" data-open="click" data-menu="vertical-menu-modern" data-col="">
 
-        <div class="col-md-2">
-            <div class="alert alert-success text-center" style="color: black;" role="alert"><a style="color: black;" target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vSkL2fqSTEVn3acYHK87NrDxkWI-ImzHGzQd3XP_8a1xJpgcBzyRN7MX0EAa_d9H77s2s86c-o6H6WG/pub"><b>Paramedikų RP Gidas</b></a></div>
-        </div>
-        <div class="col-md-2">
-            <div class="alert alert-success text-center" style="color: black;" role="alert"><a style="color: black;" target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vReow44r_PpS2JHR7wWmehs6Q5lmQaQ3EZFjXv6Ka_N7y8ztsfnLh49JnpZ_QzcBObM4LyVpchNXckO/pub"><b>Gydytojų RP Gidas</b></a></div>
-        </div>
-        <div class="col-md-2">
-            <div class="alert alert-success text-center" style="color: black;" role="alert"><a style="color: black;" target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vQbtftFSqVHSKsiBN28ZFjwgG0BOGoKvLViPtKvIWzs8hw246Jwksn8OtXQltLKTVIB9mY1QkVmvb2G/pub"><b>Chirurgų RP Gidas</b></a></div>
-        </div>
+
+
+<div class="app-content content ">
+
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active btn btn-primary" style="margin-right: 10px;" target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vSkL2fqSTEVn3acYHK87NrDxkWI-ImzHGzQd3XP_8a1xJpgcBzyRN7MX0EAa_d9H77s2s86c-o6H6WG/pub">Paramedikų gidas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active btn btn-primary" style="margin-right: 10px;" target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vReow44r_PpS2JHR7wWmehs6Q5lmQaQ3EZFjXv6Ka_N7y8ztsfnLh49JnpZ_QzcBObM4LyVpchNXckO/pub">Gydytojų gidas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active btn btn-primary" style="margin-right: 10px;" target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vQbtftFSqVHSKsiBN28ZFjwgG0BOGoKvLViPtKvIWzs8hw246Jwksn8OtXQltLKTVIB9mY1QkVmvb2G/pub">Chirurgų gidas</a>
+            </li>
+
+        </ul>
+
     </div>
-    <div class="alert alert-success text-center" role="alert">Medikamentų skaičiuotuvas</div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <form role="form" id="price" name="price">
-                    <fieldset>
-                        <div class="form-group">
-                            <label class="control-label">Antibiotikai</label>
-                            <input name="colorful" id="qty_antibiotikai" class="form-control" type="number" value="0" min="0" max="100" />
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Bintai</label>
-                            <input name="colorful" id="qty_bintai" class="form-control" type="number" value="0" min="0" max="100" />
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Vaistinėlės</label>
-                            <input name="colorful" id="qty_vaistineles" class="form-control" type="number" value="0" min="0" max="100" />
-                        </div>
-                        <br>
-                        <br>
-                        <div class="form-group">
-                            <label class="control-label">Kūno bintas</label>
-                            <input name="colorful" id="qty_kunobintas" class="form-control" type="number" value="0" min="0" max="100" />
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Kojos įtvaras</label>
-                            <input name="colorful" id="qty_kojositvaras" class="form-control" type="number" value="0" min="0" max="100" />
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Rankos įtvaras</label>
-                            <input name="colorful" id="qty_rankositvaras" class="form-control" type="number" value="0" min="0" max="100" />
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Kaklo įtvaras</label>
-                            <input name="colorful" id="qty_kakloitvaras" class="form-control" type="number" value="0" min="0" max="100" />
-                        </div>
-                    </fieldset>
-                </form>
-                <div class="col-9 text-center total">
+    <div class="content-wrapper container-xxl p-0">
 
-                    <h3 style="color: white;"><b>Suma:</b>
-                        <span id="total_value">
-                            0
-                        </span></h3>
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+
+
+
+
+            <div class="row">
+                <div class="col-xl-5 col-lg-5">
+                    <div class="card shadow mb-4">
+
+                        <div class="card-header">
+                            <h4 class="card-title">Medikamentų skaičiuotuvas</h4>
+                        </div>
+
+                        <div class="card-body">
+                            <form role="form" id="price" name="price">
+                                <fieldset>
+                                    <div class="col-12 text-center total">
+                                        <h3><b>Suma:</b>
+                                            <span id="total_value">
+                                                            0
+                                                    </span>
+                                        </h3>
+                                        <a class="btn btn-primary" id="btn_reload" href="javascript:void(0)"><i class="fa-solid fa-arrows-rotate"></i> Atstatyti</a>
+                                    </div>
+                                    <div class="col-8 margin-right " style="margin-bottom: 12px;">
+                                        <div class="form-check form-switch">
+                                            <input type="checkbox" class="form-check-input" id="wlSwitch" />
+                                            <label class="form-check-label" for="wlSwitch">Perka pareigūnas/mechanikas</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-8 margin-right " style="margin-bottom: 18px;">
+                                        <div class="form-check form-switch">
+                                            <input type="checkbox" class="form-check-input" id="drSwitch" />
+                                            <label class="form-check-label" for="drSwitch">Perka su draudimu</label>
+                                        </div>
+                                    </div>
+                                    <h5>Antibiotikai</h5>
+                                    <div class="input-group input-group-extralg pt-0">
+                                        <input type="number" class="touchspin-min-max" id="qty_antibiotikai" value="0" />
+                                    </div>
+
+                                    <h5>Bintai</h5>
+                                    <div class="input-group input-group-extralg pt-0">
+                                        <input type="number" class="touchspin-min-max" id="qty_bintai" value="0" />
+                                    </div>
+
+                                    <h5>Vaistinėlės</h5>
+                                    <div class="input-group input-group-extralg pt-0">
+                                        <input type="number" class="touchspin-min-max" id="qty_vaistineles" value="0" />
+                                    </div>
+
+                                    <br>
+                                    <br>
+
+                                    <h5>Kūno bintas</h5>
+                                    <div class="input-group input-group-extralg pt-0">
+                                        <input type="number" class="touchspin-min-max" id="qty_kunobintas" value="0" />
+                                    </div>
+
+                                    <h5>Kojos įtvaras</h5>
+                                    <div class="input-group input-group-extralg pt-0">
+                                        <input type="number" class="touchspin-min-max" id="qty_kojositvaras" value="0" />
+                                    </div>
+
+                                    <h5>Rankos įtvaras</h5>
+                                    <div class="input-group input-group-extralg pt-0">
+                                        <input type="number" class="touchspin-min-max" id="qty_rankositvaras" value="0" />
+                                    </div>
+
+                                    <h5>Kaklo įtvaras</h5>
+                                    <div class="input-group input-group-extralg pt-0">
+                                        <input type="number" class="touchspin-min-max" id="qty_kakloitvaras" value="0" />
+                                    </div>
+
+                                    <h5>Naminio augintinio vaistai</h5>
+                                    <div class="input-group input-group-extralg pt-0">
+                                        <input type="number" class="touchspin-min-max" id="qty_augvaistai" value="0" />
+                                    </div>
+
+                                </fieldset>
+                            </form>
+
+                        </div>
+                    </div>
                 </div>
 
+                <div class="col-xl-5 col-lg-5">
+                    <div class="card shadow mb-4">
+                        <div class="card-header">
+                            <h4 class="card-title">Papildoma informacija:</h4>
+                        </div>
 
+                        <div class="card-body">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe style="height: 680px; width: 540px;" class="embed-responsive-item" src="https://docs.google.com/document/d/e/2PACX-1vTP2ikNdkxKTGqN_QQWSwTqxFZyp4Q1hwde6RTD6R5h-WQxVBCIgUSRjnFtypB9KVtr-Nm5Gjb7gQou/pub?embedded=true"></iframe>
 
+                                </div>
 
-
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="nowrap alert alert-success text-center" role="alert">
-                        <div class="mt-3 small">
-                            <p style="text-align: left;"><strong><span class="hljs-deletion">- AKCIJOS LAIKAS MEDIKAMENTŲ SETUKAMS:</span> </strong></p>
-                            <p style="text-align: left;">&nbsp;</p>
-                            <p style="text-align: left;"><strong><span class="hljs-deletion">- NE AKCIJOS METU MEDIKAMENTŲ SETAS KAINUOJA 12000$.</span></strong></p>
-                            <p style="text-align: left;">&nbsp;</p>
-                            <p style="text-align: left;">Akcijos metu seto kaina 8000$</p>
-                            <p style="text-align: left;"><strong><span class="hljs-deletion">- ŠEŠTADIENIAIS: nuo 18 iki 22 valandos.</span> </strong></p>
-                            <p style="text-align: left;"><strong><span class="hljs-deletion">- PIRMADIENIAIS: nuo 18 iki 22 valandos.</span> </strong></p>
-                            <p style="text-align: left;">&nbsp;</p>
-                            <p style="text-align: left;">Vyresniems mechanikams (tarnybos metu) - <strong>full seto kaina 6000$ visada.</strong> (Vyr. Mechanikai: Neriukinis Kuzavas,&nbsp;Darius Haaaa, Dymka Navidymka, Alisa Olsen); <strong>50% - išrašymas iš palatos 2500$ (tarnybos metu)</strong></p>
-                            <p style="text-align: left;"><strong>Jiems galima parduoti TIK pateikus pasą. </strong></p>
-                            <p style="text-align: left;">Jeigu perka atskirus įtvarus nuolaidos NETAIKOMOS. ANTIBIOTIKAI visiems mechanikams - 100$/vnt. VISADA. Mechanikams GYDYMAS: 50% nuolaida gydymui, bet kurioje žemėlapio vietoje.</p>
-                            <p style="text-align: left;">&nbsp;</p>
-                            <p style="text-align: left;"><strong><span class="hljs-deletion">-MECHANIKAI MUMS: </span></strong> 50% pigesnis atvykimas į iškvietimus. Taisymo įrankiai 150$/vnt. (Kai esate su MEDIKO uniforma). Medikų mašinos tobulinimas be antkainių (tik medikų mašinoms ir esant su uniforma).</p>
-                            <p style="text-align: left;"><span style="color: #ff0000;"><strong>&nbsp;POLICININKAMS NUOLAIDOS NĖRA TAIKOMOS!</strong></span></p>
-                            <p style="text-align: left;">&nbsp;</p>
                         </div>
 
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
+</div>
 
 
 
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="bootstrap-number-input.js"></script>
-    <script>
-        // Remember set you events before call bootstrapSwitch or they will fire after bootstrapSwitch's events
-        $("[name='checkbox2']").change(function() {
-            if (!confirm('Do you wanna cancel me!')) {
-                this.checked = true;
-            }
-        });
 
-        $('#after').bootstrapNumber();
-        $('#qty_antibiotikai').bootstrapNumber({
-            upClass: 'success',
-            downClass: 'danger'
-        });
-        $('#qty_bintai').bootstrapNumber({
-            upClass: 'success',
-            downClass: 'danger'
-        });
-        $('#qty_vaistineles').bootstrapNumber({
-            upClass: 'success',
-            downClass: 'danger'
-        });
-        $('#qty_kunobintas').bootstrapNumber({
-            upClass: 'success',
-            downClass: 'danger'
-        });
-        $('#qty_kojositvaras').bootstrapNumber({
-            upClass: 'success',
-            downClass: 'danger'
-        });
-        $('#qty_rankositvaras').bootstrapNumber({
-            upClass: 'success',
-            downClass: 'danger'
-        });
-        $('#qty_kakloitvaras').bootstrapNumber({
-            upClass: 'success',
-            downClass: 'danger'
-        });
-
-    </script>
+<script src="/app-assets/vendors/js/vendors.min.js"></script>
 
 
-    <script>
-        function calculateTotal() {
-            let unit_price = {
-                antibiotikai: 200,
+<script src="/app-assets/vendors/js/forms/spinner/jquery.bootstrap-touchspin.js?ver=1"></script>
+<script src="/app-assets/js/scripts/forms/form-number-input.js?ver=1"></script>
+
+<script>
+    $("[name='checkbox2']").change(function() {
+        if (!confirm('Do you wanna cancel me!')) {
+            this.checked = true;
+        }
+    });
+
+
+
+</script>
+
+
+<script>
+    function calculateTotal() {
+        var val;
+        var switchElement = $("#wlSwitch");
+        var switchElement2 = $("#drSwitch");
+        var unit_price = {};
+        if (switchElement.is(":checked")) {
+            unit_price = {
+                antibiotikai: 200/2,
                 bintai: 100,
                 vaistineles: 300,
                 kunobintas: 400,
                 kojositvaras: 400,
                 rankositvaras: 400,
-                kakloitvaras: 400
+                kakloitvaras: 400,
+                augvaistai: 400
+        };
+        } else if(switchElement2.is(":checked")) {
+                unit_price = {
+                    antibiotikai: 200,
+                    bintai: 100,
+                    vaistineles: 300/2,
+                    kunobintas: 400/2,
+                    kojositvaras: 400/2,
+                    rankositvaras: 400,
+                    kakloitvaras: 400,
+                    augvaistai: 400
             };
-            let item_price = {}
+            } else {
+                    unit_price = {
+                        antibiotikai: 200,
+                        bintai: 100,
+                        vaistineles: 300,
+                        kunobintas: 400,
+                        kojositvaras: 400,
+                        rankositvaras: 400,
+                        kakloitvaras: 400,
+                        augvaistai: 400
+                    };
+            }
+                let item_price = {}
 
-            item_price.antibiotikai = ($("#qty_antibiotikai").val() * unit_price.antibiotikai)
-            $("#price_antibiotikai").val(item_price.antibiotikai);
+                item_price.antibiotikai = ($("#qty_antibiotikai").val() * unit_price.antibiotikai)
+                $("#price_antibiotikai").val(item_price.antibiotikai);
 
-            item_price.bintai = ($("#qty_bintai").val() * unit_price.bintai)
-            $("#price_bintai").val(item_price.bintai);
+                item_price.bintai = ($("#qty_bintai").val() * unit_price.bintai)
+                $("#price_bintai").val(item_price.bintai);
 
-            item_price.vaistineles = ($("#qty_vaistineles").val() * unit_price.vaistineles)
-            $("#price_vaistineles").val(item_price.vaistineles);
-
-
-
-            item_price.kunobintas = ($("#qty_kunobintas").val() * unit_price.kunobintas)
-            $("#price_kunobintas").val(item_price.kunobintas);
-
-            item_price.kojositvaras = ($("#qty_kojositvaras").val() * unit_price.kojositvaras)
-            $("#price_kojositvaras").val(item_price.kojositvaras);
-
-            item_price.rankositvaras = ($("#qty_rankositvaras").val() * unit_price.rankositvaras)
-            $("#price_rankositvaras").val(item_price.rankositvaras);
-
-            item_price.kakloitvaras = ($("#qty_kakloitvaras").val() * unit_price.kakloitvaras)
-            $("#price_kakloitvaras").val(item_price.kakloitvaras);
+                item_price.vaistineles = ($("#qty_vaistineles").val() * unit_price.vaistineles)
+                $("#price_vaistineles").val(item_price.vaistineles);
 
 
-            let total = item_price.antibiotikai + item_price.bintai + item_price.vaistineles + item_price.kunobintas + item_price.kojositvaras + item_price.rankositvaras + item_price.kakloitvaras;
+
+                item_price.kunobintas = ($("#qty_kunobintas").val() * unit_price.kunobintas)
+                $("#price_kunobintas").val(item_price.kunobintas);
+
+                item_price.kojositvaras = ($("#qty_kojositvaras").val() * unit_price.kojositvaras)
+                $("#price_kojositvaras").val(item_price.kojositvaras);
+
+                item_price.rankositvaras = ($("#qty_rankositvaras").val() * unit_price.rankositvaras)
+                $("#price_rankositvaras").val(item_price.rankositvaras);
+
+                item_price.kakloitvaras = ($("#qty_kakloitvaras").val() * unit_price.kakloitvaras)
+                $("#price_kakloitvaras").val(item_price.kakloitvaras);
+
+                item_price.augvaistai = ($("#qty_augvaistai").val() * unit_price.kakloitvaras)
+                $("#price_augvaistai").val(item_price.augvaistai);
+                let total = item_price.antibiotikai + item_price.bintai + item_price.vaistineles + item_price.kunobintas + item_price.kojositvaras + item_price.rankositvaras + item_price.kakloitvaras + item_price.augvaistai;
 
 
-            $("#total_value").text(total);
+                $("#total_value").text(total);
 
-        }
+                }
 
-        $(function() {
-            $(".form-control").on("change keyup", calculateTotal)
-        })
+                $(function() {
+                        $(".form-control").on("change keyup", calculateTotal)
+                        $(document).on('click', '#btn_reload', function () {
+                            $('#price')[0].reset();
+                            $("#total_value").text('0');
+                        });
+                        $("#wlSwitch").change(function () {
+                            disableOrEnableOtherSwitches("wl");
+                            calculateTotal();
+                        });
+                        $("#drSwitch").change(function () {
+                            disableOrEnableOtherSwitches("dr");
+                            calculateTotal();
+                        });
+                    })
 
-    </script>
+                function disableOrEnableOtherSwitches(caller) {
+                        if(caller == "wl") {
+                            var switchElement = $("#wlSwitch");
+                            if (switchElement.is(":checked")) {
+                                $('#drSwitch').prop('checked', false); // UnChecks it
+                            } else {
+                                //$('#drSwitch').prop('checked', true); // Checks it
+                            }
+                        } else if (caller == "dr") {
+                            var switchElement = $("#drSwitch");
+                            if (switchElement.is(":checked")) {
+                                $('#wlSwitch').prop('checked', false); // UnChecks it
+                            } else {
+                                //$('#wlSwitch').prop('checked', true); // Checks it
+                            }
+                        }
+                    }
 
 
+
+
+</script>
 </body>
 
 </html>
